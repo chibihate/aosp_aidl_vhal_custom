@@ -1,0 +1,18 @@
+android_app {
+    name: "Hello_VHAL",
+    srcs: [
+        "java/**/*.java"
+    ],
+    resource_dirs: ["res"],
+    privileged: true,
+    certificate: "platform",
+    platform_apis: true,
+    manifest: "AndroidManifest.xml",
+    static_libs: [
+        "androidx.appcompat_appcompat",
+        "com.google.android.material_material",
+    ],
+    libs: [
+       "android.car", // this lib will provide Car APIs
+    ],
+}
