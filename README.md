@@ -22,6 +22,15 @@ This is Android AIDL VHAL custom example
 
 3. Clone repo to run app
 
+4. Debug VHAL
+* Reference: https://source.android.com/docs/automotive/vhal/vhal_debug
+
+```
+adb root && adb shell dumpsys android.hardware.automotive.vehicle.IVehicle/default --set 557846348 -i 1000
+
+adb root && adb shell dumpsys android.hardware.automotive.vehicle.IVehicle/default --get 557846348
+```
+
 
 ## Reference
 1. https://medium.com/@number1shiksha/how-to-read-car-speed-using-car-property-in-aosp-edaec29f218e
